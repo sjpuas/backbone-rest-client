@@ -14,10 +14,10 @@ define(['views/QuestionsView','models/QuestionModel','models/QuestionCollection'
             },
             questions: function () {
                 var questionCollection = new QuestionCollection();
-                this.changeView(new QuestionsView({
+                new QuestionsView({
                     el: $('#content'),
                     collection: questionCollection
-                }));
+                });
                 questionCollection.fetch();
             }
         });
