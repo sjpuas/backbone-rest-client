@@ -1,1 +1,5 @@
-<p><%= question %></p>
+<div id="question_<%= _id %>">
+    <p><%= question %></p>
+    <input type="text" name="answer" id="answer_<%= _id %>"/>
+    <input type="submit" value="responder" id="button_<%= _id %>" class="buttonAnswer"/>
+</div>

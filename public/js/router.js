@@ -1,5 +1,5 @@
-define(['views/QuestionView','views/QuestionsView','models/QuestionModel','models/QuestionCollection'],
-    function (QuestionView, QuestionsView, QuestionModel,QuestionCollection) {
+define(['views/QuestionsView','models/QuestionModel','models/QuestionCollection'],
+    function (QuestionsView, QuestionModel,QuestionCollection) {
         var ChallengeRouter = Backbone.Router.extend({
             currentView: null,
             routes: {
@@ -15,7 +15,7 @@ define(['views/QuestionView','views/QuestionsView','models/QuestionModel','model
             questions: function () {
                 var questionCollection = new QuestionCollection();
                 this.changeView(new QuestionsView({
-                    el: $('.question').first(),
+                    el: $('#content'),
                     collection: questionCollection
                 }));
                 questionCollection.fetch();
